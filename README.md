@@ -1,22 +1,25 @@
 прошивка для анализатора/генератора сигналов который используется для связи с игрой SpaceOdyssey
 
 levelStart.* -  работает с 1-м уровнем (запуск ракеты)
+
 levelFly.* -    работает с 2-м уровнем
+
 levelLandyng.* - работает с 3-м уровнем
 
+
 в каждом levelStart.cpp (и в остальных файлах level...cpp ) есть 3 основные функции:
-void levelStartSetup(){ - вызывается при старте уровня
-}
 
-void levelStartLoop(){ - вызывается постоянно в цикле
-}
+void levelStartSetup() - вызывается при старте уровня
 
-void handlePacketStart(AsyncUDPPacket packet){ - не используется
-}
+void levelStartLoop() - вызывается постоянно в цикле
+
+void handlePacketStart(AsyncUDPPacket packet) - не используется
+
 
 вызов функций прописывается в файле level.cpp
 
 в drivers.h можно посмотреть какой вывод ардуино подключается к какому выводу ESP32
+
 { 2, 13 },
 { 3, 12 },
 { 4, 14 },
